@@ -42,7 +42,7 @@ Headers
 email: joaoalmeida@test.com
 password: testtest
 ```
-Para visualizar os posts em http://localhost:3000/posts utilize os Headers obtidos no login:
+Para visualizar os posts em GET http://localhost:3000/posts utilize os Headers obtidos no login:
 ```console
 "access-token": "wwwww",
 "token-type":   "Bearer",
