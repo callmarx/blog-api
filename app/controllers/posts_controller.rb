@@ -16,7 +16,8 @@ class PostsController < ApiController
 
   # POST /posts
   def create
-    @post = Post.new(post_params)
+    #@post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
     if @post.save
       render json: @post, status: :created, location: @post
@@ -27,7 +28,9 @@ class PostsController < ApiController
 
   # PATCH/PUT /posts/1
   def update
-    if @post.update(post_params)
+    if @post.user_id != current_user.id
+      render json: @post.errors, status: :unauthorized
+    elsif @post.update(post_params)
       render json: @post
     else
       render json: @post.errors, status: :unprocessable_entity
@@ -36,7 +39,11 @@ class PostsController < ApiController
 
   # DELETE /posts/1
   def destroy
-    @post.destroy
+    if @post.user_id != current_user.id
+      render json: @post.errors, status: :unauthorized
+    else
+      @post.destroy
+    end
   end
 
   private

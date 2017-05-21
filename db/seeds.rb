@@ -19,8 +19,9 @@ Post.create(
   user_id:1
 )
 
+User.create(email: 'mariasilva@test.com', nickname: 'Mia', name: 'Maria Silva', password: "testtest" )
 Post.create(
-  title: "Mais um Post do Joda",
-  body:"E isso pq eu não gostava de escrever, tudo bem que isso aqui esta mais para tweets do que posts de blog/afins rs.",
-  user_id:1
+  title: "Não confunda!",
+  body:"Sou maria e não marina. Este post SOMENTE pode ser apagado e editado pela Maria.",
+  user_id:2
 )
