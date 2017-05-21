@@ -50,3 +50,11 @@ Para visualizar os posts em http://localhost:3000/posts utilize os Headers obtid
 "expiry":       "yyyyy",
 "uid":          "zzzzz"
 ```
+
+Para painel administrativo acesse via navegador http://localhost:3000/admin com o usuário admin teste:
+```console
+email: 'admin@example.com'
+password: 'password'
+```
+
+#### OBS: Os usuários do blog pertencem ao User Model e os usuarios administrativos ao AdminUser Model
