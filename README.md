@@ -37,12 +37,12 @@ Puma starting in single mode...
 ```
 Para login de usuário teste faça a seguinte requisição POST
 ```console
-http://localhost:3000/auth/sign_in
+http://localhost:3000/api/auth/sign_in
 Headers
 email: joaoalmeida@test.com
 password: testtest
 ```
-Para visualizar os posts em GET http://localhost:3000/posts utilize os Headers obtidos no login:
+Para visualizar os posts em GET http://localhost:3000/api/posts utilize os Headers obtidos no login:
 ```console
 "access-token": "wwwww",
 "token-type":   "Bearer",
